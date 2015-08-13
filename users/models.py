@@ -2,6 +2,7 @@ from django.db import models
 from teora_base.models import Teora_model
 
 class User(Teora_model):
+	user_id = models.AutoField(primary_key=True)
 	name = models.CharField(max_length=50)
 	email = models.EmailField(max_length=100)
 	password = models.CharField(max_length=50)
@@ -12,6 +13,7 @@ class User(Teora_model):
 
 
 class User_type(Teora_model):
+	user_type_id = models.AutoField(primary_key=True)
 	name = models.CharField(max_length=50)
 
 	class Meta:
